@@ -8,6 +8,32 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
+#include "keys_de.h"
+
+/*
+ * DE_ Key Reference (requires host OS set to German keyboard layout)
+ *
+ * Default Layer:
+ *   &kp SEMI   -> &kp DE_O_UMLAUT   ö
+ *   &kp SQT    -> &kp DE_A_UMLAUT   ä
+ *   &kp FSLH   -> &kp DE_MINUS      - (auf DE liegt - auf der /-Taste)
+ *
+ * Symbol Layer:
+ *   &kp AT     -> &kp DE_AT         @  (RA+Q)
+ *   &kp LBKT   -> &kp DE_LBKT       [  (RA+8)
+ *   &kp RBKT   -> &kp DE_RBKT       ]  (RA+9)
+ *   &kp BSLH   -> &kp DE_BSLH       \  (RA+ß)
+ *   &kp LBRC   -> &kp DE_LBRC       {  (RA+7)
+ *   &kp RBRC   -> &kp DE_RBRC       }  (RA+0)
+ *   &kp PIPE   -> &kp DE_PIPE       |  (RA+<)
+ *   &kp TILDE  -> &kp DE_TILDE      ~  (RA+])
+ *   &kp CARET  -> &kp DE_CARET      ^  (^-Taste, kein Shift)
+ *   &kp GRAVE  -> &kp DE_GRAVE      `  (Shift+=)
+ *
+ * Noch nicht platziert:
+ *   &kp DE_U_UMLAUT   ü
+ *   &kp DE_SHARP_S    ß
+ */
 
 / {
     chosen {
@@ -27,7 +53,7 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE | ALT |
             bindings = <
                 &kp TAB   &kp Q  &kp W  &kp E  &kp R  &kp T      &kp Y    &kp U    &kp I     &kp O   &kp P    &kp BSPC
-                &kp LCTRL &kp A  &kp S  &kp D  &kp F  &kp G      &kp H    &kp J    &kp K     &kp L   &kp SEMI &kp SQT
+                &kp LCTRL &kp A  &kp S  &kp D  &kp F  &kp G      &kp H    &kp J    &kp K     &kp L   &kp DE_A_UMLAUT &kp SQT
                 &kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B      &kp N    &kp M    &kp COMMA &kp DOT &kp FSLH &kp ESC
                                         &kp LGUI &mo 1 &kp SPACE  &kp RET  &mo 2    &kp RALT
             >;
