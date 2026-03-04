@@ -3,14 +3,28 @@ parse_config:
     - "boards/arm/corne_choc_pro/corne_choc_pro-layouts.dtsi"
   zmk_remove_keycode_prefix: ["DE_"]
   zmk_keycode_map:
+    #### --- QWERTZ --- ####
     Q: {t: Q, h: '@'}
+    W: {t: W, h: 'ſ'} 
+    E: {t: E, h: '€'}
+    R: {t: R, h: '¶'}
+    T: {t: T, h: 'ŧ'}
+
+    Z: {t: Z, h: '←'}
+    U: {t: U, h: '↓'}
+    I: {t: I, h: '→'}
+    O: {t: O, h: 'ø'}
+    P: {t: P, h: 'þ'}
+
+
     A_UMLAUT: "Ä"
     O_UMLAUT: "Ö"
     U_UMLAUT: "ü"
     SHARP_S: "ß"
     ESZETT: "ß"
     EURO: "€"
-    ##### ----- SYMBOL ---- #####
+
+    ##### --- SYMBOL --- #####
     #row 1
     EXCL: "!"
     DQT: '"'

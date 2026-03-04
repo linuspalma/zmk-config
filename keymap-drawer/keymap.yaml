@@ -3,27 +3,27 @@ layers:
   QWERTZ:
   - TAB
   - {t: Q, h: '@'}
-  - W
-  - E
-  - R
-  - T
-  - Z
-  - U
-  - I
-  - O
-  - P
+  - {t: W, h: ſ}
+  - {t: E, h: €}
+  - {t: R, h: ¶}
+  - {t: T, h: ŧ}
+  - {t: Z, h: ←}
+  - {t: U, h: ↓}
+  - {t: I, h: →}
+  - {t: O, h: ø}
+  - {t: P, h: þ}
   - DEL
   - ESC
-  - A
-  - S
+  - {t: A, h: LSHIFT}
+  - {t: S, h: LCTRL}
   - D
   - F
   - G
   - H
   - J
   - K
-  - L
-  - Ö
+  - {t: L, h: RCTRL}
+  - {t: +, h: RSHIFT}
   - RCTRL
   - LSHFT
   - Y
