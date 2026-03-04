@@ -100,11 +100,11 @@ layers:
   - '='
   - DEL
   - LCTRL
-  - LBKT
-  - RBKT
-  - CARET
-  - BSLH
-  - TILDE
+  - '['
+  - ']'
+  - ^
+  - \
+  - '~'
   - ß
   - ´
   - €
@@ -112,11 +112,11 @@ layers:
   - '#'
   - RCTRL
   - LSHFT
-  - LT
-  - GT
-  - LBRC
-  - RBRC
-  - PIPE
+  - <
+  - '>'
+  - '{'
+  - '}'
+  - '|'
   - '?'
   - '`'
   - '@'

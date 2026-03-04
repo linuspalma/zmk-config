@@ -26,13 +26,25 @@ parse_config:
     # BSPC: "⌫"
     BSPC: "DEL"
     # row 2
-    
+    LBKT: "["
+    RBKT: "]"
+    CARET: "^"
+    BSLH: '\'
+    TILDE: "~"
+
     SZ: "ß"
     ACUTE: "´"
     EURO: "€"
     PLUS: "+"
     HASH: "#"
 
+    # row 3
+
+    LT: "<" 
+    GT: ">"
+    LBRC: "{"
+    RBRC: "}"
+    PIPE: "|"
 
     QMARK: "?"
     GRAVE: "`"
