@@ -10,9 +10,9 @@ parse_config:
     ESZETT: "ß"
     EURO: "€"
     ##### ----- SYMBOL ---- #####
-    #column 1
+    #row 1
     EXCL: "!"
-    QUOTE: '"'
+    DQT: '"'
     SECT: "§"
     DLLR: "$"
     PRCNT: "%"
@@ -24,6 +24,20 @@ parse_config:
     # BSPC: "←"
     # BSPC: "⌫"
     BSPC: "DEL"
+    # row 2
+    
+    SZ: "ß"
+    ACUTE: "´"
+    EURO: "€"
+    PLUS: "+"
+    HASH: "#"
+
+
+    QMARK: "?"
+    GRAVE: "`"
+    AT: "@"
+    ASTRK: "*"
+    APOS: "'"
 
 # Generate SVG (run from repo root):
 # keymap -c keymap-drawer/keymap_drawer.yaml parse -z config/corne_choc_pro.keymap | sed 's/zmk_keyboard: corne_choc_pro/zmk_keyboard: corneish_zen/' | sed 's/layout_name: default_layout/layout_name: foostan_corne_6col_layout/' > keymap-drawer/keymap.yaml && keymap draw keymap-drawer/keymap.yaml > keymap-drawer/keymap.svg
