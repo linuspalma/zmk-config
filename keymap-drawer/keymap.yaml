@@ -16,12 +16,12 @@ layers:
   - ESC
   - {t: A, h: LSHIFT}
   - {t: S, h: LCTRL}
-  - D
+  - {t: D, h: LALT}
   - F
   - G
   - H
   - J
-  - K
+  - {t: K, h: RALT}
   - {t: L, h: RCTRL}
   - {t: +, h: RSHIFT}
   - RCTRL
@@ -93,8 +93,8 @@ layers:
   - ´
   - '{'
   - '}'
+  - ']'
   - '['
-  - '&kb DE_RBKT'
   - '"'
   - '|'
   - UNDER
