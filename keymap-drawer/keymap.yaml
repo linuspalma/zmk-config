@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: corneish_zen, layout_name: foostan_corne_6col_layout}
 layers:
-  QWERTZ: [TAB, Q, W, E, R, T, Z, U, I, O, P, BSPC, ESC, A, S, D, F, G, H, J, K, L, ö, RCTRL, LSHFT, Y, X, C, V, B, N, M, COMMA, DOT, FSLH, RSHIFT, LGUI, NUMBER,
-    SPACE, RET, SYMBOL, RCTRL]
+  QWERTZ: [TAB, Q, W, E, R, T, Z, U, I, O, P, DEL, ESC, A, S, D, F, G, H, J, K, L, Ö, RCTRL, LSHFT, Y, X, C, V, B, N, M, COMMA, DOT, /, RSHIFT, LGUI, NUMBER, SPACE,
+    RET, SYMBOL, RCTRL]
   NUMBER:
   - TAB
   - '1'
@@ -14,7 +14,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - BSPC
+  - DEL
   - LCTRL
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
@@ -47,17 +47,17 @@ layers:
   - SPACE
   SYMBOL:
   - TAB
-  - EXCL
-  - AT
-  - HASH
-  - DLLR
-  - PRCNT
-  - CARET
-  - AMPS
-  - ASTRK
-  - LPAR
-  - RPAR
-  - BSPC
+  - '!'
+  - '"'
+  - §
+  - $
+  - '%'
+  - '&'
+  - /
+  - (
+  - )
+  - '='
+  - DEL
   - LCTRL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -65,7 +65,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - MINUS
-  - EQUAL
+  - '='
   - LBKT
   - RBKT
   - BSLH

@@ -4,11 +4,26 @@ parse_config:
   zmk_remove_keycode_prefix: ["DE_"]
   zmk_keycode_map:
     A_UMLAUT: "Ä"
-    O_UMLAUT: "ö"
+    O_UMLAUT: "Ö"
     U_UMLAUT: "ü"
     SHARP_S: "ß"
     ESZETT: "ß"
     EURO: "€"
+    ##### ----- SYMBOL ---- #####
+    #column 1
+    EXCL: "!"
+    QUOTE: '"'
+    SECT: "§"
+    DLLR: "$"
+    PRCNT: "%"
+    AMPS: "&"
+    FSLH: "/"
+    LPAR: "("
+    RPAR: ")"
+    EQUAL: "="
+    # BSPC: "←"
+    # BSPC: "⌫"
+    BSPC: "DEL"
 
 # Generate SVG (run from repo root):
 # keymap -c keymap-drawer/keymap_drawer.yaml parse -z config/corne_choc_pro.keymap | sed 's/zmk_keyboard: corne_choc_pro/zmk_keyboard: corneish_zen/' | sed 's/layout_name: default_layout/layout_name: foostan_corne_6col_layout/' > keymap-drawer/keymap.yaml && keymap draw keymap-drawer/keymap.yaml > keymap-drawer/keymap.svg
