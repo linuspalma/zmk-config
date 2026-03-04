@@ -3,6 +3,7 @@ parse_config:
     - "boards/arm/corne_choc_pro/corne_choc_pro-layouts.dtsi"
   zmk_remove_keycode_prefix: ["DE_"]
   zmk_keycode_map:
+    Q: {t: Q, h: '@'}
     A_UMLAUT: "Ä"
     O_UMLAUT: "Ö"
     U_UMLAUT: "ü"

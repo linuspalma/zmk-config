@@ -1,7 +1,48 @@
 layout: {zmk_keyboard: corneish_zen, layout_name: foostan_corne_6col_layout}
 layers:
-  QWERTZ: [TAB, Q, W, E, R, T, Z, U, I, O, P, DEL, ESC, A, S, D, F, G, H, J, K, L, Ö, RCTRL, LSHFT, Y, X, C, V, B, N, M, COMMA, DOT, /, RSHIFT, LGUI, NUMBER, SPACE,
-    RET, SYMBOL, RALT]
+  QWERTZ:
+  - TAB
+  - {t: Q, h: '@'}
+  - W
+  - E
+  - R
+  - T
+  - Z
+  - U
+  - I
+  - O
+  - P
+  - DEL
+  - ESC
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - Ö
+  - RCTRL
+  - LSHFT
+  - Y
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - COMMA
+  - DOT
+  - /
+  - RSHIFT
+  - LGUI
+  - NUMBER
+  - SPACE
+  - RET
+  - SYMBOL
+  - RALT
   NUMBER:
   - TAB
   - '1'
@@ -59,11 +100,11 @@ layers:
   - '='
   - DEL
   - LCTRL
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LBKT
+  - RBKT
+  - CARET
+  - BSLH
+  - TILDE
   - ß
   - ´
   - €
@@ -71,11 +112,11 @@ layers:
   - '#'
   - RCTRL
   - LSHFT
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LT
+  - GT
+  - LBRC
+  - RBRC
+  - PIPE
   - '?'
   - '`'
   - '@'
