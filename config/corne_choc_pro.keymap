@@ -78,18 +78,31 @@
             // | SHFT |  Y  |  X  |  C  |  V  |  B  |          |  N  |  M  |  ,  |  .  |  -  | SHIFT |
             //                    | GUI | LWR | SPC |          | ENT | RSE | ALT |
             bindings = <
-                &kp TAB   &kp Q             &kp W          &kp E       &kp R            &kp T   &kp DE_Z &kp U  &kp I      &kp O          &kp P              &kp BSPC
-                &kp ESC   &hm LSHIFT DE_A   &hm LCTRL DE_S &hm LALT D  &kp F            &kp G   &kp H    &kp J  &hm RALT K &hm RCTRL DE_L &hm RSHIFT DE_PLUS &kp RCTRL
-                &kp LSHFT &kp DE_Y          &kp X          &kp C       &kp V            &kp B   &kp N    &kp M  &kp COMMA  &kp DOT        &kp FSLH           &kp RSHIFT
-                                            &kp LGUI       &mo 1       &kp SPACE        &kp RET &mo 2    &kp RALT
+                &tog 1   &kp Q             &kp W          &kp E       &kp R       &kp T   &kp DE_Z &kp U  &kp I      &kp O          &kp P              &tog 2
+                &none   &hm LALT DE_A   &hm LGUI DE_S &hm LCTRL D  &hm LSHFT F &kp G   &kp H    &hm RSHFT J  &hm RCTRL K &hm RALT DE_L &hm RGUI DE_PLUS &none
+                &none     &kp DE_Y          &kp X          &kp C       &kp V       &kp B   &kp N    &kp M  &kp COMMA  &kp DOT        &kp FSLH           &none
+                                                           &kp ESC       &kp SPACE       &kp TAB   &none &kp RET    &kp BSPC
             >;
         };
 
+        /* default_layer { */
+        /*     display-name = "QWERTZ"; */
+        /*     // |  TAB |  Q  |  W  |  E  |  R  |  T  |          | Z   |  U  |  I  |  O  |  P  | BSPC  | */
+        /*     // | ESC  |  A  |  S  |  D  |  F  |  G  |          |  H  |  J  |  K  |  L  |  +  |  CTRL | */
+        /*     // | SHFT |  Y  |  X  |  C  |  V  |  B  |          |  N  |  M  |  ,  |  .  |  -  | SHIFT | */
+        /*     //                    | GUI | LWR | SPC |          | ENT | RSE | ALT | */
+        /*     bindings = < */
+        /*         &kp TAB   &kp Q             &kp W          &kp E       &kp R            &kp T   &kp DE_Z &kp U  &kp I      &kp O          &kp P              &kp BSPC */
+        /*         &kp ESC   &hm LSHIFT DE_A   &hm LCTRL DE_S &hm LALT D  &kp F            &kp G   &kp H    &kp J  &hm RALT K &hm RCTRL DE_L &hm RSHIFT DE_PLUS &kp RCTRL */
+        /*         &kp LSHFT &kp DE_Y          &kp X          &kp C       &kp V            &kp B   &kp N    &kp M  &kp COMMA  &kp DOT        &kp FSLH           &kp RSHIFT */
+        /*                                     &kp LGUI       &mo 1       &kp SPACE        &kp RET &mo 2    &kp RALT */
+        /*     >; */
+        /* }; */
         lower_layer {
             display-name = "NUMBER";
             // |  TAB |  1  |  2  |  3  |  4  |  5  |          |  6  |  7  |  8  |  9  |  0  | BSPC |
             // | CTRL | BT1 | BT2 | BT3 | BT4 | BT5 |          | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT | BTCL| RGB | RST |BOOT |UNLCK|          |     |     |     |     |     |      |
+            // | SHFT | BTCL| RGB | RST |BOOT |UNLCK|          |     |     |     |     |     |      | 
             //                    | GUI |     | SPC |          | GUI |     | ALT |
             bindings = <
                 &kp TAB   &kp N1       &kp N2          &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9   &kp N0  &kp BSPC
@@ -115,7 +128,7 @@
         };
 
         extra_layer_1 {
-            display-name = "EXTRA 1";
+            display-name = "SYSTEM";
             bindings = <
                 &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
                 &trans &trans &trans &trans &kp DE_EXCL &trans  &trans &trans &trans &trans &trans &trans
