@@ -46,13 +46,26 @@
 / {
     combos {
       compatible = "zmk,combos";
-      combo_sys {
+    // aktiviert den layer 1: NUMBER mit den tasten v+n 
+      combo_num {
         timeout-ms = <50>;
-        key-positions = <0 11>;
-        bindings = <&mo 3>;
+        key-positions = <28 31>;
+        bindings = <&mo 1>;
       };
+      // aktiviert den layer 3: SYMBOL mit den tasten r+u
+      combo_sym {
+        timeout-ms = <50>;
+        key-positions = <4 7>;
+        bindings = <&mo 2>;
+      };
+    // aktiviert den layer 3: SYSTEM mit den tasten ganz aussen oben rechts und oben links
+    combo_sys {
+      timeout-ms = <50>;
+      key-positions = <0 11>;
+      bindings = <&mo 3>;
     };
   };
+    };
 
 / {
   behaviors {
@@ -77,18 +90,21 @@
 / {
     keymap {
         compatible = "zmk,keymap";
-
+  //  0  1  2  3  4  5  |  6  7  8  9 10 11
+  // 12 13 14 15 16 17  | 18 19 20 21 22 23
+  // 24 25 26 27 28 29  | 30 31 32 33 34 35
+  //          36 37 38  | 39 40 41
         default_layer {
             display-name = "QWERTZ";
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |          | Z   |  U  |  I  |  O  |  P  | BSPC  |
-            // | ESC  |  A  |  S  |  D  |  F  |  G  |          |  H  |  J  |  K  |  L  |  +  |  CTRL |
-            // | SHFT |  Y  |  X  |  C  |  V  |  B  |          |  N  |  M  |  ,  |  .  |  -  | SHIFT |
-            //                    | GUI | LWR | SPC |          | ENT | RSE | ALT |
+            // |  L01 |  Q  |  W  |  E  |  R  |  T  |          | Z   |  U  |  I  |  O  |  P  |  L02  |
+            // |      |  A  |  S  |  D  |  F  |  G  |          |  H  |  J  |  K  |  L  |  +  |       |
+            // |      |  Y  |  X  |  C  |  V  |  B  |          |  N  |  M  |  ,  |  .  |  -  |       |
+            //                    | ESC | SPC | TAB |          |     | RET | DEL |
             bindings = <
-                &tog 1   &kp Q             &kp W          &kp E       &kp R       &kp T   &kp DE_Z &kp U  &kp I      &kp O          &kp P              &tog 2
-                &none   &hm LALT DE_A   &hm LGUI DE_S &hm LCTRL D  &hm LSHFT F &kp G   &kp H    &hm RSHFT J  &hm RCTRL K &hm RALT DE_L &hm RGUI DE_PLUS &none
-                &none     &kp DE_Y          &kp X          &kp C       &kp V       &kp B   &kp N    &kp M  &kp COMMA  &kp DOT        &kp FSLH           &none
-                                                           &esc_num       &kp SPACE       &kp TAB   &none &kp RET    &kp BSPC
+                &tog 1 &kp Q         &kp W         &kp E       &kp R       &kp T   &kp DE_Z &kp U       &kp I       &kp O         &kp P            &tog 2
+                &none  &hm LALT DE_A &hm LGUI DE_S &hm LCTRL D &hm LSHFT F &kp G   &kp H    &hm RSHFT J &hm RCTRL K &hm RGUI DE_L &hm RALT DE_PLUS &none
+                &none  &kp DE_Y      &kp X         &kp C       &kp V       &kp B   &kp N    &kp M       &kp COMMA   &kp DOT       &kp FSLH         &none
+                                                   &esc_num    &kp SPACE   &kp TAB &none    &kp RET     &kp BSPC
             >;
         };
 
@@ -107,40 +123,44 @@
         /* }; */
         lower_layer {
             display-name = "NUMBER";
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |          |  6  |  7  |  8  |  9  |  0  | BSPC |
-            // | CTRL | BT1 | BT2 | BT3 | BT4 | BT5 |          | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT | BTCL| RGB | RST |BOOT |UNLCK|          |     |     |     |     |     |      | 
-            //                    | GUI |     | SPC |          | GUI |     | ALT |
+            // |      |  1  |  2  |  3  |  4  |  5  |          |  6  |  7  |  8  |  9  |  0  |      |
+            // |      |     |     |     |     |     |          | LFT | DWN |  UP | RGT |     |      |
+            // |      |     |     |     |     |     |          |     |     |     |     |     |      | 
+            //                    |     |     |     |          |     |     |     |
             bindings = <
-                &trans   &kp N1       &kp N2          &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9   &kp N0  &trans
-                &trans &bt BT_SEL 0 &bt BT_SEL 1    &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-                &trans &bt BT_CLR   &rgb_ug RGB_TOG &sys_reset   &bootloader  &studio_unlock &trans   &trans   &trans &trans    &trans &trans
-                                                       &trans     &trans       &trans      &trans  &trans   &trans
+                &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
+                &trans &trans &trans &trans &trans &trans &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans   &trans   &trans &trans    &trans &trans
+                                            &trans &trans &trans   &trans   &trans &trans
             >;
         };
 
         raise_layer {
             display-name = "SYMBOL";
-            // | TAB  |  §  |  ^  |  ´  |  {  |  }  |          |  ]  |  [  |  "  | '|' |  _  |  BSPC  |
-            // | ESC  |  $  |  =  |  %  |  /  |  ~  |          |  &  |  ?  |  !  |  +  |  #  |  CTRL  |
-            // | SHFT |  €  |  \  |  `  |  (  |  )  |          |  >  |  <  |  '  |  *  |  @  |  SHIFT |
-            //                    | GUI |     | SPC |          | ENT |     | ALT |
+            // |      |  §  |  ^  |  ´  |  {  |  }  |          |  ]  |  [  |  "  | '|' |  _  |        |
+            // |      |  $  |  =  |  %  |  /  |  ~  |          |  &  |  ?  |  !  |  +  |  #  |        |
+            // |      |  €  |  \  |  `  |  (  |  )  |          |  >  |  <  |  '  |  *  |  @  |        |
+            //                    |     |     |     |          |     |     |     |
             bindings = <
-                &trans   &kp DE_SECT &kp DE_CARET &kp DE_ACUTE &kp DE_LBRC &kp DE_RBRC      &kp DE_RBKT &kp DE_LBKT  &kp DE_DQT  &kp DE_PIPE  &kp DE_UNDER &trans
+                &trans &kp DE_SECT &kp DE_CARET &kp DE_ACUTE &kp DE_LBRC &kp DE_RBRC      &kp DE_RBKT &kp DE_LBKT  &kp DE_DQT  &kp DE_PIPE  &kp DE_UNDER &trans
                 &trans &kp DE_DLLR &kp DE_EQUAL &kp DE_PRCNT &kp DE_FSLH &kp DE_TILDE     &kp DE_AMPS &kp DE_QMARK &kp DE_EXCL &kp DE_PLUS  &kp DE_HASH  &trans
                 &trans &kp DE_EURO &kp DE_BSLH  &kp DE_GRAVE &kp DE_LPAR &kp DE_RPAR      &kp DE_GT   &kp DE_LT    &kp DE_APOS &kp DE_ASTRK &kp DE_AT    &trans
-                                                       &trans     &trans       &trans      &trans  &trans   &trans
+                                                &trans       &trans      &trans           &trans      &trans       &trans
             >;
 
+            // |      |     |     |     |     |     |          |     |     |     |     |     |      |
+            // |      | BT1 | BT2 | BT3 | BT4 | BT5 |          |     |     |     |     |     |      |
+            // |      | BTCL| RGB | RST |BOOT |UNLCK|          |     |     |     |     |     |      | 
+            //                    |     |     |     |          |     |     |     |
         };
 
         extra_layer_1 {
             display-name = "SYSTEM";
             bindings = <
-                &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &kp DE_EXCL &trans  &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-                                     &trans &trans &trans  &trans &trans &trans
+                &trans &trans       &trans          &trans       &trans       &trans         &trans &trans &trans &trans &trans &trans
+                &trans &bt BT_SEL 0 &bt BT_SEL 1    &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans &trans &trans &trans &trans &trans
+                &trans &bt BT_CLR   &rgb_ug RGB_TOG &sys_reset   &bootloader  &studio_unlock &tran  &trans &trans &trans &trans &trans
+                                                    &trans       &trans       &trans         &trans &trans &trans
             >;
         };
 
