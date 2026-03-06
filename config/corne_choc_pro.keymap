@@ -50,19 +50,19 @@
       combo_num {
         timeout-ms = <50>;
         key-positions = <28 31>;
-        bindings = <&mo 1>;
+        bindings = <&tog 1>;
       };
       // aktiviert den layer 3: SYMBOL mit den tasten r+u
       combo_sym {
         timeout-ms = <50>;
         key-positions = <4 7>;
-        bindings = <&mo 2>;
+        bindings = <&tog 2>;
       };
     // aktiviert den layer 3: SYSTEM mit den tasten ganz aussen oben rechts und oben links
     combo_sys {
       timeout-ms = <50>;
       key-positions = <0 11>;
-      bindings = <&mo 3>;
+      bindings = <&tog 3>;
     };
   };
     };
@@ -128,7 +128,7 @@
             // |      |     |     |     |     |     |          |     |     |     |     |     |      | 
             //                    |     |     |     |          |     |     |     |
             bindings = <
-                &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
+                &to 1 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &to 2
                 &trans &trans &trans &trans &trans &trans &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
                 &trans &trans &trans &trans &trans &trans &trans   &trans   &trans &trans    &trans &trans
                                             &trans &trans &trans   &trans   &trans &trans
@@ -142,7 +142,7 @@
             // |      |  €  |  \  |  `  |  (  |  )  |          |  >  |  <  |  '  |  *  |  @  |        |
             //                    |     |     |     |          |     |     |     |
             bindings = <
-                &trans &kp DE_SECT &kp DE_CARET &kp DE_ACUTE &kp DE_LBRC &kp DE_RBRC      &kp DE_RBKT &kp DE_LBKT  &kp DE_DQT  &kp DE_PIPE  &kp DE_UNDER &trans
+                &to 1 &kp DE_SECT &kp DE_CARET &kp DE_ACUTE &kp DE_LBRC &kp DE_RBRC      &kp DE_RBKT &kp DE_LBKT  &kp DE_DQT  &kp DE_PIPE  &kp DE_UNDER &to 2
                 &trans &kp DE_DLLR &kp DE_EQUAL &kp DE_PRCNT &kp DE_FSLH &kp DE_TILDE     &kp DE_AMPS &kp DE_QMARK &kp DE_EXCL &kp DE_PLUS  &kp DE_HASH  &trans
                 &trans &kp DE_EURO &kp DE_BSLH  &kp DE_GRAVE &kp DE_LPAR &kp DE_RPAR      &kp DE_GT   &kp DE_LT    &kp DE_APOS &kp DE_ASTRK &kp DE_AT    &trans
                                                 &trans       &trans      &trans           &trans      &trans       &trans
