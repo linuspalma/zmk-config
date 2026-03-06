@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: corneish_zen, layout_name: foostan_corne_6col_layout}
 layers:
   QWERTZ:
-  - TAB
+  - {t: NUMBER, h: toggle}
   - {t: Q, h: '@'}
   - {t: W, h: ſ}
   - {t: E, h: €}
@@ -12,20 +12,20 @@ layers:
   - {t: I, h: →}
   - {t: O, h: ø}
   - {t: P, h: þ}
-  - DEL
-  - ESC
-  - {t: A, h: LSHIFT}
-  - {t: S, h: LCTRL}
-  - {t: D, h: LALT}
-  - F
+  - {t: SYMBOL, h: toggle}
+  - ''
+  - {t: A, h: LALT}
+  - {t: S, h: LGUI}
+  - {t: D, h: LCTRL}
+  - {t: F, h: LSHFT}
   - G
   - H
-  - J
-  - {t: K, h: RALT}
-  - {t: L, h: RCTRL}
-  - {t: +, h: RSHIFT}
-  - RCTRL
-  - LSHFT
+  - {t: J, h: RSHFT}
+  - {t: K, h: RCTRL}
+  - {t: L, h: RGUI}
+  - {t: +, h: RALT}
+  - ''
+  - ''
   - Y
   - X
   - C
@@ -36,15 +36,15 @@ layers:
   - COMMA
   - DOT
   - /
-  - RSHIFT
-  - LGUI
-  - NUMBER
+  - ''
+  - '&esc_num'
   - SPACE
-  - RET
-  - SYMBOL
-  - RALT
-  NUMBER:
   - TAB
+  - ''
+  - RET
+  - DEL
+  NUMBER:
+  - {t: ▽, type: trans}
   - '1'
   - '2'
   - '3'
@@ -55,51 +55,51 @@ layers:
   - '8'
   - '9'
   - '0'
-  - DEL
-  - LCTRL
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - LEFT
   - DOWN
   - UP
   - RIGHT
   - {t: ▽, type: trans}
-  - RCTRL
-  - LSHFT
-  - BT CLR
-  - RGB TOG
-  - '&sys_reset'
-  - '&bootloader'
-  - '&studio_unlock'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - RSHIFT
-  - LGUI
   - {type: held}
-  - SPACE
-  - RET
   - {t: ▽, type: trans}
-  - RALT
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   SYMBOL:
-  - TAB
+  - {t: ▽, type: trans}
   - §
   - ^
   - ´
-  - '{'
+  - {t: '{', type: held}
   - '}'
   - ']'
-  - '['
+  - {t: '[', type: held}
   - '"'
   - '|'
   - UNDER
-  - DEL
-  - LCTRL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - $
   - '='
   - '%'
@@ -110,8 +110,8 @@ layers:
   - '!'
   - +
   - '#'
-  - RCTRL
-  - LSHFT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - €
   - \
   - '`'
@@ -122,41 +122,15 @@ layers:
   - ''''
   - '*'
   - '@'
-  - RSHIFT
-  - LGUI
   - {t: ▽, type: trans}
-  - SPACE
-  - RET
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  SYSTEM:
   - {type: held}
-  - RALT
-  EXTRA 1:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '!'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -169,8 +143,34 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - BT CLR
+  - RGB TOG
+  - '&sys_reset'
+  - '&bootloader'
+  - '&studio_unlock'
+  - '&tran'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   EXTRA 2:
   - {t: ▽, type: trans}
@@ -388,5 +388,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
-- p: [37, 40]
-  k: EXTRA 1
+- p: [28, 31]
+  k: NUMBER
+- p: [4, 7]
+  k: SYMBOL
+- p: [0, 11]
+  k: SYSTEM
