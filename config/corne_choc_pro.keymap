@@ -12,32 +12,6 @@
 #include "keys_de.h"
 #endif
 
-/*
- * DE_ Key Reference (requires host OS set to German keyboard layout)
- *
- * Default Layer:
- *   &kp SEMI   -> &kp DE_O_UMLAUT   ö
- *   &kp SQT    -> &kp DE_A_UMLAUT   ä
- *   &kp FSLH   -> &kp DE_MINUS      - (auf DE liegt - auf der /-Taste)
- *
- * Symbol Layer:
- *   &kp AT     -> &kp DE_AT         @  (RA+Q)
- *   &kp LBKT   -> &kp DE_LBKT       [  (RA+8)
- *   &kp RBKT   -> &kp DE_RBKT       ]  (RA+9)
- *   &kp BSLH   -> &kp DE_BSLH       \  (RA+ß)
- *   &kp LBRC   -> &kp DE_LBRC       {  (RA+7)
- *   &kp RBRC   -> &kp DE_RBRC       }  (RA+0)
- *   &kp PIPE   -> &kp DE_PIPE       |  (RA+<)
- *   &kp TILDE  -> &kp DE_TILDE      ~  (RA+])
- *   &kp CARET  -> &kp DE_CARET      ^  (^-Taste, kein Shift)
- *   &kp GRAVE  -> &kp DE_GRAVE      `  (Shift+=)
- *
- * Noch nicht platziert:
- *   &kp DE_U_UMLAUT   ü
- *   &kp DE_SHARP_S    ß
- */
-
-  /* <> */
 / {
     chosen {
         zmk,physical-layout = &default_layout;
@@ -46,18 +20,21 @@
 / {
     combos {
       compatible = "zmk,combos";
+    // funktion bleibt noch da als fallback, wird aber ersetzt durch thumb actions.
     // aktiviert den layer 1: NUMBER mit den tasten v+n 
       combo_num {
         timeout-ms = <50>;
         key-positions = <28 31>;
         bindings = <&tog 1>;
       };
+    // funktion bleibt noch da als fallback, wird aber ersetzt durch thumb actions.
       // aktiviert den layer 3: SYMBOL mit den tasten r+u
       combo_sym {
         timeout-ms = <50>;
         key-positions = <4 7>;
         bindings = <&tog 2>;
       };
+    // funktion bleibt noch da als fallback, wird aber durch normalen keypress ersetzt.
     // aktiviert den layer 3: SYSTEM mit den tasten ganz aussen oben rechts und oben links
     combo_sys {
       timeout-ms = <50>;
@@ -108,19 +85,6 @@
             >;
         };
 
-        /* default_layer { */
-        /*     display-name = "QWERTZ"; */
-        /*     // |  TAB |  Q  |  W  |  E  |  R  |  T  |          | Z   |  U  |  I  |  O  |  P  | BSPC  | */
-        /*     // | ESC  |  A  |  S  |  D  |  F  |  G  |          |  H  |  J  |  K  |  L  |  +  |  CTRL | */
-        /*     // | SHFT |  Y  |  X  |  C  |  V  |  B  |          |  N  |  M  |  ,  |  .  |  -  | SHIFT | */
-        /*     //                    | GUI | LWR | SPC |          | ENT | RSE | ALT | */
-        /*     bindings = < */
-        /*         &kp TAB   &kp Q             &kp W          &kp E       &kp R            &kp T   &kp DE_Z &kp U  &kp I      &kp O          &kp P              &kp BSPC */
-        /*         &kp ESC   &hm LSHIFT DE_A   &hm LCTRL DE_S &hm LALT D  &kp F            &kp G   &kp H    &kp J  &hm RALT K &hm RCTRL DE_L &hm RSHIFT DE_PLUS &kp RCTRL */
-        /*         &kp LSHFT &kp DE_Y          &kp X          &kp C       &kp V            &kp B   &kp N    &kp M  &kp COMMA  &kp DOT        &kp FSLH           &kp RSHIFT */
-        /*                                     &kp LGUI       &mo 1       &kp SPACE        &kp RET &mo 2    &kp RALT */
-        /*     >; */
-        /* }; */
         lower_layer {
             display-name = "NUMBER";
             // |      |  1  |  2  |  3  |  4  |  5  |          |  6  |  7  |  8  |  9  |  0  |      |
@@ -128,9 +92,9 @@
             // |      |     |     |     |     |     |          |     |     |     |     |     |      | 
             //                    |     |     |     |          |     |     |     |
             bindings = <
-                &to 1 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &to 2
-                &trans &trans &trans &trans &trans &trans &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-                &trans &trans &trans &trans &trans &trans &trans   &trans   &trans &trans    &trans &trans
+                &to 3 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &to 4
+                &to 1 &trans &trans &trans &trans &trans &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &to 2
+                &to 5 &trans &trans &trans &trans &trans &trans   &trans   &trans &trans    &trans &to 6
                                             &trans &trans &trans   &trans   &trans &trans
             >;
         };
