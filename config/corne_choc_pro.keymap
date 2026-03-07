@@ -65,7 +65,7 @@
         require-prior-idle-ms = <125>;
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
-        hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 15 16 17 24 25 26 27 28 29 36 37 38>;
+        hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
         hold-trigger-on-release;
     };
   };
@@ -94,7 +94,7 @@
                 &tog 1 &kp Q          &kp W          &kp E        &kp R        &kp T   &kp DE_Z &kp U        &kp I        &kp O          &kp P             &tog 2
                 &none  &hml LALT DE_A &hml LGUI DE_S &hml LCTRL D &hml LSHFT F &kp G   &kp H    &hmr RSHFT J &hmr RCTRL K &hmr RGUI DE_L &hmr RALT DE_PLUS &none
                 &none  &kp DE_Y       &kp X          &kp C        &kp V        &kp B   &kp N    &kp M        &kp COMMA    &kp DOT        &kp FSLH          &none
-                                                     &esc_num     &lt 1 SPACE  &kp TAB &none    &lt 7 RET    &kp BSPC
+                                                     &esc_num     &lt 1 SPACE  &kp TAB &none    &lt 2 RET    &kp BSPC
             >;
         };
 
