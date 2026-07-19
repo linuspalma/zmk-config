@@ -40,9 +40,9 @@ layers:
   - '&esc_num'
   - {t: SPACE, h: NUMBER}
   - TAB
-  - ''
+  - {t: NAV, h: toggle}
   - {t: RET, h: SYMBOL}
-  - {t: DEL, s: DEL}
+  - DEL
   NUMBER:
   - {t: SYSTEM, h: toggle}
   - '1'
@@ -83,8 +83,8 @@ layers:
   - {t: QWERTZ, h: toggle}
   - {type: held}
   - {t: ▽, type: trans}
-  - '0'
   - {t: ▽, type: trans}
+  - '0'
   - {t: ▽, type: trans}
   SYMBOL:
   - {t: SYSTEM, h: toggle}
@@ -179,10 +179,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_RIGHT'
   - {t: ▽, type: trans}
   - {t: NAV, h: toggle}
   - {t: NUMBER, h: toggle}
@@ -203,18 +203,18 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&msc SCRL_LEFT'
+  - '&msc SCRL_DOWN'
+  - '&msc SCRL_UP'
+  - '&msc SCRL_RIGHT'
   - {t: ▽, type: trans}
   - {t: FN, h: toggle}
   - {t: QWERTZ, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&mkp MCLK'
+  - '&mkp LCLK'
+  - '&mkp RCLK'
   MOUSE:
   - {t: SYSTEM, h: toggle}
   - {t: ▽, type: trans}
