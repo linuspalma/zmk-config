@@ -88,7 +88,7 @@ layers:
   - {t: ▽, type: trans}
   SYMBOL:
   - {t: SYSTEM, h: toggle}
-  - §
+  - '@'
   - ^
   - ´
   - '{'
@@ -121,7 +121,7 @@ layers:
   - <
   - ''''
   - '*'
-  - '@'
+  - §
   - {t: FN, h: toggle}
   - {t: QWERTZ, h: toggle}
   - {t: ▽, type: trans}
@@ -388,9 +388,15 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
-- p: [28, 31]
-  k: {t: NUMBER, h: toggle}
-- p: [4, 7]
-  k: {t: SYMBOL, h: toggle}
-- p: [0, 11]
-  k: {t: SYSTEM, h: toggle}
+- p: [13, 34]
+  k: Ä
+  l: [QWERTZ]
+- p: [14, 34]
+  k: ß
+  l: [QWERTZ]
+- p: [9, 25]
+  k: Ö
+  l: [QWERTZ]
+- p: [7, 25]
+  k: ü
+  l: [QWERTZ]
