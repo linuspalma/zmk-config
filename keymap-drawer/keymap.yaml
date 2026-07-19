@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: corneish_zen, layout_name: foostan_corne_6col_layout}
 layers:
   QWERTZ:
-  - {t: NUMBER, h: toggle}
+  - {t: SYSTEM, h: toggle}
   - {t: Q, h: '@'}
   - {t: W, h: ſ}
   - {t: E, h: €}
@@ -12,8 +12,8 @@ layers:
   - {t: I, h: →}
   - {t: O, h: ø}
   - {t: P, h: þ}
-  - {t: SYMBOL, h: toggle}
-  - ''
+  - {t: NAV, h: toggle}
+  - {t: NUMBER, h: toggle}
   - {t: A, h: LALT}
   - {t: S, h: LGUI}
   - {t: D, h: LCTRL}
@@ -24,8 +24,8 @@ layers:
   - {t: K, h: RCTRL}
   - {t: L, h: RGUI}
   - {t: +, h: RALT}
-  - ''
-  - ''
+  - {t: SYMBOL, h: toggle}
+  - {t: MOUSE, h: toggle}
   - Y
   - X
   - C
@@ -36,15 +36,15 @@ layers:
   - COMMA
   - DOT
   - /
-  - ''
+  - {t: FN, h: toggle}
   - '&esc_num'
-  - SPACE
+  - {t: SPACE, h: NUMBER}
   - TAB
   - ''
-  - RET
-  - DEL
+  - {t: RET, h: SYMBOL}
+  - {t: DEL, s: DEL}
   NUMBER:
-  - {t: ▽, type: trans}
+  - {t: SYSTEM, h: toggle}
   - '1'
   - '2'
   - '3'
@@ -55,51 +55,51 @@ layers:
   - '8'
   - '9'
   - '0'
+  - {t: NAV, h: toggle}
+  - {t: NUMBER, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - '4'
+  - '5'
+  - '6'
   - {t: ▽, type: trans}
-  - LEFT
-  - DOWN
-  - UP
-  - RIGHT
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: SYMBOL, h: toggle}
+  - {t: MOUSE, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '1'
+  - '2'
+  - '3'
+  - {t: ▽, type: trans}
+  - {t: FN, h: toggle}
+  - {t: QWERTZ, h: toggle}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '0'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   SYMBOL:
-  - {t: ▽, type: trans}
+  - {t: SYSTEM, h: toggle}
   - §
   - ^
   - ´
-  - {t: '{', type: held}
+  - '{'
   - '}'
   - ']'
-  - {t: '[', type: held}
+  - '['
   - '"'
   - '|'
   - UNDER
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: NAV, h: toggle}
+  - {t: NUMBER, h: toggle}
   - $
   - '='
   - '%'
@@ -110,8 +110,8 @@ layers:
   - '!'
   - +
   - '#'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: SYMBOL, h: toggle}
+  - {t: MOUSE, h: toggle}
   - €
   - \
   - '`'
@@ -122,15 +122,15 @@ layers:
   - ''''
   - '*'
   - '@'
+  - {t: FN, h: toggle}
+  - {t: QWERTZ, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   SYSTEM:
-  - {type: held}
+  - {t: SYSTEM, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -141,8 +141,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
+  - {t: NAV, h: toggle}
+  - {t: NUMBER, h: toggle}
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
@@ -153,26 +153,28 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: SYMBOL, h: toggle}
+  - {t: MOUSE, h: toggle}
   - BT CLR
   - RGB TOG
   - '&sys_reset'
   - '&bootloader'
   - '&studio_unlock'
-  - '&tran'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: FN, h: toggle}
+  - {t: QWERTZ, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  NAV:
+  - {t: SYSTEM, h: toggle}
   - {t: ▽, type: trans}
-  EXTRA 2:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -182,12 +184,20 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: NAV, h: toggle}
+  - {t: NUMBER, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
   - {t: ▽, type: trans}
+  - {t: SYMBOL, h: toggle}
+  - {t: MOUSE, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -198,11 +208,15 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: FN, h: toggle}
+  - {t: QWERTZ, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  MOUSE:
+  - {t: SYSTEM, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -213,9 +227,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: NAV, h: toggle}
+  - {t: NUMBER, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  EXTRA 3:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -224,6 +239,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: SYMBOL, h: toggle}
+  - {t: MOUSE, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -234,11 +251,15 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: FN, h: toggle}
+  - {t: QWERTZ, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  FN:
+  - {t: SYSTEM, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -249,6 +270,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: NAV, h: toggle}
+  - {t: NUMBER, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -258,8 +281,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  EXTRA 4:
   - {t: ▽, type: trans}
+  - {t: SYMBOL, h: toggle}
+  - {t: MOUSE, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -270,38 +294,15 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: FN, h: toggle}
+  - {t: QWERTZ, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   EXTRA 5:
+  - {t: SYSTEM, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -312,6 +313,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: NAV, h: toggle}
+  - {t: NUMBER, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -322,6 +325,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: SYMBOL, h: toggle}
+  - {t: MOUSE, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -332,19 +337,15 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: FN, h: toggle}
+  - {t: QWERTZ, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   EXTRA 6:
+  - {t: SYSTEM, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -355,6 +356,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: NAV, h: toggle}
+  - {t: NUMBER, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -365,6 +368,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: SYMBOL, h: toggle}
+  - {t: MOUSE, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -375,13 +380,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: FN, h: toggle}
+  - {t: QWERTZ, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -389,8 +389,8 @@ layers:
   - {t: ▽, type: trans}
 combos:
 - p: [28, 31]
-  k: NUMBER
+  k: {t: NUMBER, h: toggle}
 - p: [4, 7]
-  k: SYMBOL
+  k: {t: SYMBOL, h: toggle}
 - p: [0, 11]
-  k: SYSTEM
+  k: {t: SYSTEM, h: toggle}
